@@ -90,6 +90,8 @@ public final class ShootableFireballPlugin extends JavaPlugin implements Listene
                            .getDirection(),
                           x.speed,
                           x.power);
+            e.getPlayer()
+             .setCooldown(Material.FIRE_CHARGE, config.coolDown.value());
 
             GameMode gameMode = e.getPlayer()
                                  .getGameMode();
